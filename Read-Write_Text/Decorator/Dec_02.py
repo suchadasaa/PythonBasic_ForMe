@@ -1,30 +1,19 @@
-# template
-'''
-def capsule(function):
-    def new_function():
-        function()
+import math
 
-
-    return new_function
-'''
-
-def capsule(function):
-    def new_function():
-        print('เกราะหัว เกราะแขน เกราะอก')
-        function()
-        print('เกราะขา')
-
+def pretty_namber(function):
+    def new_function(*args, **kwargs):
+        number = function(*args, **kwargs)
+        return '{:.2f}'.format(number)
 
     return new_function
 
-@capsule
-def megaman():
-    print('Megaman')
+@pretty_namber
+def circle_area(radius):
+    return math.pi * (radius ** 2)
 
-megaman()
+@pretty_namber
+def ellipse_area(width, height):
+    return math.pi / 4 * width * height
 
-@capsule
-def zero():
-    print('zero')
-
-zero()
+print(circle_area(5))
+print(ellipse_area(10, 5))
