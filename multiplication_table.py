@@ -1,14 +1,21 @@
 import tkinter as tk
-from turtle import title
 
 
 def showOutput():
-    number = int(number_input.get())  #เพราะget จะreturn ค่ากลับมาเป็น str จึงต้องแปลงให้เป็นint 
+    number = 0
 
-    if number == 0:
+    # number = int(number_input.get())  #เพราะget จะreturn ค่ากลับมาเป็น str จึงต้องแปลงให้เป็นint
+    # if number == 0:
+    #     output_label.configure(text='ผิดที่ไว้ใจ')
+    #     return
+
+    try:
+        number = int(number_input.get())  #เพราะget จะreturn ค่ากลับมาเป็น str จึงต้องแปลงให้เป็นint 
+        if number == 0:
+            raise Exception()
+    except:
         output_label.configure(text='ผิดที่ไว้ใจ')
         return
-
 
     output = ''
 

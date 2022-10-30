@@ -1,4 +1,2 @@
-Python basic
-เขียนแอพพลิเคชัน สูตรคูณ ด้วยpython
-
-wowwwwwwwwwwww
+Basic Python
+wowwwwwwwwwwwwwwww
